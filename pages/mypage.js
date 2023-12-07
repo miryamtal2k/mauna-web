@@ -178,20 +178,65 @@ const MyPage = () => {
               </div>
               <div className='devices-container'>
                 <div className='title-devices-container'>
-                  <p className='title-devices'>Working with multiple devices.</p>
+                  <p className='title-devices'>Connect MAUNA to your devices and platforms.</p>
                 </div>
-                <div className='boxes'>
-                  <div className='box'>
-                    <img src="/Garmin.svg" alt="Garmin" />
-                  </div>
-                  <div className='box'>
-                    <img src="/Coros.svg" alt="Coros" />
-                  </div>
-                  <div className='box'>
-                    <img src="/Polar.svg" alt="Polar" />
-                  </div>
-                  <div className='box'>
-                    <img src="/Suunto.svg" alt="Polar" />
+                <div className='bandeau-defilant'>
+                  <div className='boxes'>
+                    <div className='box'>
+                      <img src="/Garmin.svg" alt="Garmin" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Coros.svg" alt="Coros" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Polar.svg" alt="Polar" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Suunto.svg" alt="Polar" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Strava.svg" alt="Strava" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Intervals.svg" alt="Intervals" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Garmin.svg" alt="Garmin" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Coros.svg" alt="Coros" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Polar.svg" alt="Polar" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Suunto.svg" alt="Polar" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Strava.svg" alt="Strava" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Intervals.svg" alt="Intervals" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Garmin.svg" alt="Garmin" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Coros.svg" alt="Coros" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Polar.svg" alt="Polar" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Suunto.svg" alt="Polar" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Strava.svg" alt="Strava" />
+                    </div>
+                    <div className='box'>
+                      <img src="/Intervals.svg" alt="Intervals" />
+                    </div>
+                    
                   </div>
                 </div>
               </div>

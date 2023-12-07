@@ -562,8 +562,10 @@ p {
 
 .devices-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 50px;
   align-self: stretch;
 }
 
@@ -573,6 +575,7 @@ p {
   align-items: center;
   gap: 10px;
   flex: 1 0 0;
+  width: 100%;
 }
 
 .title-devices {
@@ -587,15 +590,24 @@ p {
   line-height: normal;
 }
 
+.bandeau-defilant {
+  width: 100%;
+  overflow: hidden; /* Cache les parties du contenu défilant non visibles */
+}
+
 .boxes {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  align-self: stretch;
+  animation: defilement 10s linear infinite; /* Ajustez la durée selon vos besoins */
 }
 
 
 .box {
   display: flex;
+  flex: none; /* Empêche les éléments de s'étirer ou de se rétrécir */
   width: 164px;
   height: 60px;
   padding: 10px;
@@ -606,6 +618,16 @@ p {
   border-radius: 10px;
   border: 1.25px solid rgba(90, 197, 242, 0.60);
   background: var(--glass-gradient, linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(101deg, rgba(255, 255, 255, 0.15) 1.55%, rgba(255, 255, 255, 0.05) 97.5%));
+}
+
+/* Animation de défilement */
+@keyframes defilement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Déplace les éléments de 100% vers la gauche */
+  }
 }
 
 
