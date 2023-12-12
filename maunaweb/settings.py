@@ -134,7 +134,7 @@ EMAIL_USE_TLS = True  # Use TLS for secure connection
 EMAIL_HOST = 'smtp.gmail.com'  # SMTP server
 EMAIL_PORT = 587  # SMTP port
 EMAIL_HOST_USER = 'data@mauna-ai.com'  # email address
-EMAIL_HOST_PASSWORD = 'eioevczruqrjftfu'  #email password
+EMAIL_HOST_PASSWORD = 'kivhcqkunjoyocdm'  #email password
 
 # Default email addresses
 DEFAULT_FROM_EMAIL = 'data@mauna-ai.com'
