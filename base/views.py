@@ -23,6 +23,6 @@ def submit_form(request):
                 [email],  # Replace with recipient email address
                 fail_silently=False,
             )
-            return render(request, 'here.html')
-    return render(request, 'here.html')
+            return render(request, 'base/here.html')
+    return render(request, 'base/here.html')
 
