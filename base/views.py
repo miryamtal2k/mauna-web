@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 def home_view(request):
-    return render(request, 'base/here.html')
+    return render(request, 'base/home.html')
 
 def privacy_policy(request):
     return render(request, 'base/privacypolicy.html')
