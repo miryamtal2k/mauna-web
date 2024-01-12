@@ -1,33 +1,35 @@
-     {% load static %}
-     <html>
-            <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+HzFEx3g0DpTJv7aA8CqVgCJoDZJ+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" integrity="sha512-P9pgMgcSNlLb4Z2WAB2sH5KBKGnBfyJnq+bhcfLCFusrRc4XdXrhfDluBl/usq75NF5gTDIMcwI1GaG5gju+Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Mauna</title> 
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  {% load static %}
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta property="og:site_name" content="Mauna AI">
+      <meta property="og:title" content="Mauna - Unlock your hidden potential" />
+      <meta property="og:description" content=" Mauna is a solution gathering multiple factors and then using AI to optimize sport performances and reduce injuries." />
+      <meta property="og:image" itemprop="image" content="https://mauna-ai.com/static/images/mauna.png">
+      <meta property="og:type" content="website" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> {% endcomment %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"> </script>     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+HzFEx3g0DpTJv7aA8CqVgCJoDZJ+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" integrity="sha512-P9pgMgcSNlLb4Z2WAB2sH5KBKGnBfyJnq+bhcfLCFusrRc4XdXrhfDluBl/usq75NF5gTDIMcwI1GaG5gju+Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"> </script>     
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<meta property="og:site_name" content="Mauna AI">
-<meta property="og:title" content="Mauna - Unlock your hidden potential" />
-<meta property="og:description" content=" Mauna is a solution gathering multiple factors and then using AI to optimize sport performances and reduce injuries." />
-<meta property="og:image" itemprop="image" content="https://mauna-ai.com/static/images/mauna.png">
-<meta property="og:type" content="website" />
-         <link rel="icon" href="https://mauna-ai.com/static/images/favicon.svg" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+      <link rel="icon" href="https://mauna-ai.com/static/images/favicon.svg" type="image/x-icon">
+      <title>Mauna</title> 
 
     </head>
         <body>
@@ -64,12 +66,7 @@
         <li>
           <a  href="#register-container" onclick="my2Function(btn)" class="scroll-link">BECOME BETA-TESTER</a>
         </li>
-     
-             {% comment %} <li>
 
-          <a href="https://www.linkedin.com/company/ai-mauna/" target="_blank" class="m-2"> <span class="fa fa-linkedin"></span></a>
-                    <a  href="https://instagram.com/mauna.ai" target="_blank" class="m-2"> <span class="fa fa-instagram"></span></a>
-        </li> {% endcomment %}
 
       </ul>
   
@@ -88,34 +85,6 @@
   }
  </script>
 
- {% comment %} <nav class="navbar navbar-expand-lg " style="background:#F1F2F6; display:none !important;">
-    <div class="logo-container">
-            <img src="{% static 'website/logo-mauna.svg'%}" alt="logo Mauna" class="logo-mauna" />
-            <span class="text-mauna">MAUNA</span>
-                </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: 0px;
-    background-color: transparent;color:#000011">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav " style="display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;">
-      <li class="nav-item active">
-        <p class="menu-text" href="#">Solution <span class="sr-only">(current)</span></p>
-      </li>
-      <li class="nav-item">
-        <p class="menu-text" href="#">R&D</p>
-      </li>
-   <li class="nav-item">
-        <p class="menu-text" href="#">Become beta-testeur </p>
-      </li>
-    </ul>
-
-  </div>
-</nav>  {% endcomment %}
      <div class="w-100">
 
         <div class="Background">

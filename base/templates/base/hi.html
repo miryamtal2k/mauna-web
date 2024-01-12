@@ -1,1270 +1,36 @@
-     {% load static %}
-     <html>
-            <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+HzFEx3g0DpTJv7aA8CqVgCJoDZJ+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" integrity="sha512-P9pgMgcSNlLb4Z2WAB2sH5KBKGnBfyJnq+bhcfLCFusrRc4XdXrhfDluBl/usq75NF5gTDIMcwI1GaG5gju+Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Mauna</title> 
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  {% load static %}
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta property="og:site_name" content="Mauna AI">
+      <meta property="og:title" content="Mauna - Unlock your hidden potential" />
+      <meta property="og:description" content=" Mauna is a solution gathering multiple factors and then using AI to optimize sport performances and reduce injuries." />
+      <meta property="og:image" itemprop="image" content="https://mauna-ai.com/static/images/mauna.png">
+      <meta property="og:type" content="website" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> {% endcomment %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"> </script>     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+HzFEx3g0DpTJv7aA8CqVgCJoDZJ+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" integrity="sha512-P9pgMgcSNlLb4Z2WAB2sH5KBKGnBfyJnq+bhcfLCFusrRc4XdXrhfDluBl/usq75NF5gTDIMcwI1GaG5gju+Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"> </script>     
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-{% comment %} <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}"> {% endcomment %}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-         <link rel="icon" href="https://mauna-ai.com/static/images/favicon.svg" type="image/x-icon">
-
-
-<style>
-
-p {
-     margin-bottom: 0px !important;
-     margin-top: 0px !important;
- }
- .text-change {
-     opacity: 0;
-     transition: opacity 0.5s ease-in-out;
- }
-  body {
-             background: #F1F2F6;
-         }
-    
-         .navbar {
-             padding-left: 3rem;
-             padding-right: 3rem;
-         }
-    
-         .content-container {
-             display: flex;
-             flex-direction: column;
-             /* Organiser les éléments verticalement */
-             align-items: center;
-             /* Centrer horizontalement les éléments */
-             justify-content: center;
-             /* Centrer verticalement si nécessaire */
-             position: relative;
-             top: 0%;
-             height: auto;
-             /* Prendre toute la hauteur de la fenêtre de visualisation */
-             width: 100vw;
-    
-         }
-    
-         .header-container {
-             display: flex;
-             padding: 0px 10px;
-             justify-content: space-between;
-             align-items: center;
-             align-self: stretch;
-         }
-    
-         .logo-container {
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             gap: 18px;
-         }
-    
-         .logo-mauna {
-             width: auto;
-             /* ou la taille souhaitée */
-             height: auto;
-             /* pour maintenir le ratio d'aspect */
-    
-         }
-    
-         .text-mauna {
-             color: #1A4159;
-             text-align: center;
-             font-family: Poppins;
-             font-size: 30px;
-             font-style: normal;
-             font-weight: 700; 
-             line-height: normal;
-         }
-    
-         .menu-container {
-             display: flex;
-             justify-content: end;
-             align-items: center;
-             gap: 18px;
-         }
-    
-         .menu-text {
-             color: #1A4159;
-             text-align: center;
-             font-family: Poppins;
-             font-size: 20px;
-             font-style: normal;
-             font-weight: 500;
-             line-height: normal;
-             margin-top: 0px !important;
-             margin-bottom: 0px !important;
-         }
-    
-         .Background {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             gap: 40px;
-             align-self: stretch;
-             background: var(--Angular-Gradient, conic-gradient(from 186deg at 47.47% 36.4%, rgba(177, 187, 197, 0.00) 1.04192647151649deg, #B1BBC5 53.968722224235535deg, #D6DDE4 163.16468596458435deg, #F0F4F9 218.2460904121399deg));
-         }
-    
-    
-         .iceberg-container {
-             position: relative;
-             top: 0px;
-             left: 0;
-             width: 1680px;
-             height: 910px;
-             flex-shrink: 0;
-             margin-top: -100px;
-             /* A MODIFIER*/
-         }
-    
-         .iceberg-container {
-             transform: scale(0.8);
-             top: 0%;
-             left: 0%;
-             /*top: calc(originalTopValue * 0.8);
-      left: calc(originalLeftValue * 0.8); /* Réduit à 80% de la taille originale */
-             /* Assurez-vous que le positionnement est toujours correct après redimensionnement */
-             /* Vous devrez peut-être ajuster les positions top, left, etc. */
-         }
-    
-         .icebergImage {
-             position: absolute;
-             top: 188.29px;
-             left: 50%;
-             /* Centré horizontalement */
-             transform: translateX(-50%);
-             /* Ajustement pour centrer parfaitement */
-             z-index: 4;
-             /* Assurez-vous que cela est au-dessus des fonds */
-         }
-    
-    
-    
-         .petitIcebergG {
-             position: absolute;
-             top: 706px;
-             /* Positionné à 706px du haut */
-             left: 0%;
-             /* Centré horizontalement */
-             z-index: 4;
-             /* Assurez-vous que cela est au-dessus des fonds */
-         }
-    
-         .petitIcebergD {
-             position: absolute;
-             top: 114px;
-             /* Positionné à 114px du haut */
-             left: 92%;
-             /* Centré horizontalement */
-             z-index: 4;
-         }
-    
-         .carte1 {
-             position: absolute;
-             top: 48%;
-             left: 6%;
-             z-index: 4;
-         }
-    
-         .carte2 {
-             position: absolute;
-             top: 36%;
-             left: 13%;
-         }
-    
-         .carte3 {
-             position: absolute;
-             top: 22%;
-             left: 23%;
-         }
-    
-         .carte4 {
-             position: absolute;
-             top: 15%;
-             left: 38%;
-         }
-    
-         .carte5 {
-             position: absolute;
-             top: 15%;
-             left: 55%;
-         }
-    
-         .carte6 {
-             position: absolute;
-             top: 29%;
-             left: 67%;
-         }
-    
-         .carte7 {
-             position: absolute;
-             top: 19%;
-             left: 74%;
-         }
-    
-         .carte8 {
-             position: absolute;
-             top: 40%;
-             left: 79%;
-         }
-    
-         .carte9 {
-             position: absolute;
-             top: 48.5%;
-             left: 66.3%;
-         }
-    
-         .carte10 {
-             position: absolute;
-             top: 65%;
-             left: 62%;
-         }
-    
-         .carte11 {
-             position: absolute;
-             top: 70%;
-             left: 49%;
-         }
-    
-         .carte12 {
-             position: absolute;
-             top: 77%;
-             left: 31%;
-         }
-    
-         .carte13 {
-             position: absolute;
-             top: 59%;
-             left: 17%;
-         }
-    
-         .carte14 {
-             position: absolute;
-             top: 72.5%;
-             left: 68%;
-         }
-    
-    
-         /*@keyframes flotter {
-      0%, 100% {
-        transform: translateY(0) scale(1.0);
-      }
-      50% {
-        transform: translateY(-10px) scale(1.05);
-      }
-    }*/
-    
-         @keyframes flotter1 {
-             0% {
-                 transform: translateX(0px) translateY(-10px) scale(1.05);
-             }
-    
-             50% {
-                 transform: translateX(-10px) translateY(-15px) scale(1.05);
-             }
-    
-             100% {
-                 transform: translateX(0px) translateY(-10px) scale(1.05);
-             }
-         }
-    
-         @keyframes flotter2 {
-             0% {
-                 transform: translateX(0px) translateY(+10px) scale(1.05);
-             }
-    
-             50% {
-                 transform: translateX(+10px) translateY(+15px) scale(1.05);
-             }
-    
-             100% {
-                 transform: translateX(0px) translateY(+10px) scale(1.05);
-             }
-         }
-    
-         /*.carte1, .carte2, .carte3 /* etc.  {
-      animation: flotter 3s ease-in-out infinite;
-    }*/
-    
-         /*.carte1 {
-      animation: flotter 3s ease-in-out infinite;
-    }
-    
-    .carte2 {
-      animation: flotter 3s ease-in-out infinite;
-      animation-delay: 0.5s; /* Commence l'animation 0.5s plus tard 
-    }
-    
-    .carte3 {
-      animation: flotter 3s ease-in-out infinite;
-      animation-delay: 1s; /* Commence l'animation 1s plus tard
-    }*/
-    
-         .carte1 {
-             animation: flotter1 3s ease-in-out infinite;
-         }
-    
-         .carte2 {
-             animation: flotter1 3.5s ease-in-out infinite;
-             /* Durée légèrement plus longue */
-         }
-    
-         .carte3 {
-             animation: flotter1 4s ease-in-out infinite;
-             /* Durée légèrement plus courte */
-         }
-    
-         .carte4 {
-             animation: flotter1 3s ease-in-out infinite;
-         }
-    
-         .carte5 {
-             animation: flotter1 3.5s ease-in-out infinite;
-             /* Durée légèrement plus longue */
-         }
-    
-         .carte6 {
-             animation: flotter1 4s ease-in-out infinite;
-             /* Durée légèrement plus courte */
-         }
-    
-         .carte7 {
-             animation: flotter2 3.5s ease-in-out infinite;
-             /* Durée légèrement plus longue */
-         }
-    
-         .carte8 {
-             animation: flotter2 4s ease-in-out infinite;
-             /* Durée légèrement plus courte */
-         }
-    
-         .carte9 {
-             animation: flotter2 3s ease-in-out infinite;
-         }
-    
-         .carte10 {
-             animation: flotter2 3.5s ease-in-out infinite;
-             /* Durée légèrement plus longue */
-         }
-    
-         .carte11 {
-             animation: flotter2 4s ease-in-out infinite;
-             /* Durée légèrement plus courte */
-         }
-    
-         .carte12 {
-             animation: flotter2 3s ease-in-out infinite;
-         }
-    
-         .carte13 {
-             animation: flotter2 3.5s ease-in-out infinite;
-             /* Durée légèrement plus longue */
-         }
-    
-         .carte14 {
-             animation: flotter2 4s ease-in-out infinite;
-             /* Durée légèrement plus courte */
-         }
-    
-    
-         .typewriter-container {
-             position: absolute;
-             right: 56px;
-             color: #1A4159;
-             text-align: right;
-             font-family: Poppins;
-             font-size: 50px;
-             font-style: normal;
-             font-weight: 500;
-             line-height: normal;
-         }
-    
-         .typewriter-text {
-             overflow: hidden;
-             /* Cache le texte jusqu'à ce qu'il soit "écrit" */
-             border-right: .15em solid black;
-             /* Curseur de la machine à écrire */
-             white-space: nowrap;
-             /* Empêche le texte de passer à la ligne */
-             animation: typing 1.2s steps(30, end), blink-caret .50s step-end infinite;
-         }
-    
-         /* Keyframes pour l'animation de dactylographie */
-         @keyframes typing {
-             from {
-                 width: 0
-             }
-    
-             to {
-                 width: 100%
-             }
-         }
-    
-         /* Keyframes pour l'animation du curseur */
-         @keyframes blink-caret {
-    
-             from,
-             to {
-                 border-color: transparent
-             }
-    
-             50% {
-                 border-color: rgba(0, 0, 0, 0);
-             }
-         }
-    
-    
-         .get-started-btn {
-             display: inline-flex;
-             height: 51.84px;
-             padding: 8.64px 19.44px;
-             justify-content: center;
-             align-items: center;
-             gap: 10.8px;
-             flex-shrink: 0;
-             border-radius: 27px;
-             background: #1A4159;
-             color: white;
-             /* Couleur du texte */
-             border: none;
-             /* Supprimer la bordure par défaut */
-             cursor: pointer;
-             /* Style du curseur */
-             font-size: 16px;
-             /* Taille du texte */
-             position: absolute;
-             /* Positionnement absolu */
-             top: 800px;
-             /* Position par rapport au haut */
-             left: 50%;
-             /* Centré horizontalement */
-             transform: translateX(-50%);
-             /* Ajustement pour centrer parfaitement */
-             z-index: 4;
-         }
-    
-         .secondSection-container {
-             display: flex;
-             padding: 0px 50px;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             gap: 10px;
-             flex: 1 0 0;
-             align-self: stretch;
-         }
-    
-         .thematics-container {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             gap: 20px;
-             flex: 1 0 0;
-             align-self: stretch;
-         }
-    
-         /*h1 {
-      color: #367698;
-      font-family: Poppins;
-      font-size: 22px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-    
-    p {
-      font-size: 16px; /* Taille du texte pour le paragraphe
-      color: #666; /* Couleur du texte
-      /* Autres styles pour le paragraphe
-    }*/
-    
-         .MaunaSolution-container {
-             display: flex;
-             padding: 80px 120px;
-             flex-direction: column;
-             align-items: center;
-             gap: 80px;
-             align-self: stretch;
-             border-radius: 20px;
-             border: 2px solid #5AC5F2;
-             background: #001;
-         }
-    
-    
-         .TroisLogosAndTexts-container {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             gap: 74px;
-             align-self: stretch;
-         }
-    
-         .LogoAndText-container {
-             display: flex;
-             align-items: center;
-             gap: 104px;
-             align-self: stretch;
-         }
-    
-         .LogoAndTitre-container {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             gap: 8px;
-         }
-    
-         .logo1 {
-   width: 120px;
-             height: 120px;
-             margin: 0 auto !important;
-             display: block; 
-         }
-    
-         .solution-title {
-             color: rgba(90, 197, 242, 0.60);
-             text-align: center;
-             font-family: Poppins;
-             font-size: 17px;
-             font-style: normal;
-             font-weight: 700;
-             line-height: normal;
-         }
-    
-         .solution-text-container {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: flex-start;
-             gap: 8px;
-             flex: 1 0 0;
-             align-self: stretch;
-         }
-    
-         .solution-text {
-             flex: 1 0 0;
-             color: #819DAF;
-             text-align: justify;
-             font-family: Poppins;
-             font-size: 16px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: normal;
-             align-self: stretch;
-         }
-    
-    
-         .solution-text-list {
-             list-style: disc;
-             /* Style des puces */
-             padding-left: 16px;
-             /* Espace à gauche pour les puces */
-             color: #819DAF;
-             text-align: justify;
-             font-family: Poppins;
-             font-size: 16px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: normal;
-         }
-    
-         .solution-text-list li {
-             margin-bottom: 4px;
-             /* Espace entre les éléments de la liste */
-         }
-    
-    
-         .MaunaProduct {
-             display: flex;
-             padding: 80px 56px;
-             flex-direction: column;
-             align-items: center;
-             gap: 80px;
-             align-self: stretch;
-             border-radius: 20px;
-             border: 2px solid #5AC5F2;
-             background: #001;
-         }
-    
-         .title-product-container {
-             display: flex;
-             align-items: flex-start;
-             gap: 8px;
-             align-self: stretch;
-         }
-    
-         .title-product {
-             width: 417px;
-             height: 115px;
-             color: #819DAF;
-             font-family: Poppins;
-             font-size: 35px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: normal;
-         }
-    
-         .TextAndImage-container {
-             display: flex;
-             align-items: center;
-             gap: 116px;
-             align-self: stretch;
-         }
-    
-         .text-product-container {
-             display: flex;
-             flex-direction: column;
-             align-items: flex-start;
-             gap: 25px;
-             flex: 1 0 0;
-         }
-    
-         .text-product {
-             align-self: stretch;
-             color: #819DAF;
-             text-align: justify;
-             font-family: Poppins;
-             font-size: 20px;
-             font-style: normal;
-             font-weight: 300;
-             line-height: normal;
-         }
-    
-         .image-product-container {
-             display: flex;
-             height: 251.5776px;
-             flex-direction: column;
-             justify-content: space-between;
-             align-items: center;
-         }
-    
-         .image-product {
-             width: 447.2px;
-             height: 251.5776px;
-             flex-shrink: 0;
-         }
-    
-    
-         .devices-container {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             gap: 50px;
-             align-self: stretch;
-         }
-    
-    
-         .title-devices-container {
-             display: flex;
-             align-items: center;
-             gap: 10px;
-             flex: 1 0 0;
-             width: 100%;
-         }
-    
-         .title-devices {
-             color: #819DAF;
-             width: 365px;
-             height: 92px;
-             flex-shrink: 0;
-             font-family: Poppins;
-             font-size: 28px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: normal;
-         }
-    
-         .bandeau-defilant {
-             width: 100%;
-             overflow: hidden;
-             /* Cache les parties du contenu défilant non visibles */
-         }
-    
-         .boxes {
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             gap: 35px;
-             align-self: stretch;
-             animation: defilement 10s linear infinite;
-             /* Ajustez la durée selon vos besoins */
-         }
-    
-    
-         .box {
-             display: flex;
-             flex: none;
-    
-             /* Empêche les éléments de s'étirer ou de se rétrécir */
-                 {
-                 % comment %
-             }
-    
-             width: 164px;
-    
-                 {
-                 % endcomment %
-             }
-    
-             height: 60px;
-             padding: 10px;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             gap: 37.5px;
-             border-radius: 10px;
-             border: 1.25px solid rgba(90, 197, 242, 0.60);
-             background: var(--glass-gradient, linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(101deg, rgba(255, 255, 255, 0.15) 1.55%, rgba(255, 255, 255, 0.05) 97.5%));
-         }
-    
-         /* Animation de défilement */
-         @keyframes defilement {
-             0% {
-                 transform: translateX(0);
-             }
-    
-             100% {
-                 transform: translateX(-50%);
-                 /* Déplace les éléments de 100% vers la gauche */
-             }
-         }
-    
-    
-         .MaunaDataBase {
-             display: flex;
-             padding: 80px 56px;
-             flex-direction: column;
-             align-items: center;
-             gap: 80px;
-             align-self: stretch;
-             border-radius: 20px;
-             border: 2px solid #5AC5F2;
-             background: #001;
-             min-height: 500px;
-         }
-    
-         .currentlyBuilding-container {
-             display: flex;
-             flex-direction: column;
-             /* Empiler les boîtes horizontalmenet */
-             align-items: center;
-             gap: 40px;
-             /* Espace entre chaque boîte */
-             padding: 0px 16px;
-             align-self: stretch;
-         }
-    
-         .titre-buildingDataBase {
-             color: #819DAF;
-             font-family: Poppins;
-             font-size: 28px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: normal;
-             width: 100%;
-             flex-shrink: 0;
-         }
-    
-         .becomeBetaAndSynch-container {
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             gap: 50px;
-             align-self: stretch;
-         }
-    
-         .become-beta-btn {
-             display: flex;
-             height: 50px;
-             padding: 8px 18px;
-             justify-content: center;
-             align-items: center;
-             gap: 8px;
-             border-radius: 27px;
-             border: none;
-             /* Supprimer la bordure par défaut */
-             background: #1A4159;
-             color: white;
-             text-align: center;
-             font-family: Poppins;
-             font-size: 16px;
-             cursor: pointer;
-             /* Style du curseur */
-             font-style: normal;
-             line-height: normal;
-         }
-    
-    
-    
-         .synchAndNumbers-container {
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             gap: 0px;
-         }
-    
-         .logo-synch {
-             width: 52.1832px;
-             height: 72px;
-         }
-    
-         .WithAndNumbers-container {
-             display: inline-flex;
-             flex-direction: column;
-             align-items: center;
-             gap: 0px;
-         }
-    
-         .text-numbers {
-             color: #819DAF;
-             font-family: Poppins;
-             font-size: 28px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: normal;
-         }
-    
-         strong,
-         b {
-             font-weight: bold;
-         }
-    
-         .extra-bold {
-             font-weight: 800;
-             /* Les valeurs peuvent varier de 100 à 900 */
-         }
-    
-         .Numbers-container {
-             display: flex;
-             align-items: flex-start;
-             gap: 352.4px;
-         }
-    
-         /*Become a Beta tester*/
-    
-         .become-beta-container {
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             gap: 53.6px;
-             align-self: stretch;
-         }
-    
-         .titre-become-beta-container {
-             display: flex;
-             padding: 0px 16px;
-             align-items: flex-start;
-             gap: 447.2px;
-             align-self: stretch;
-         }
-    
-         .titre-become-beta {
-             width: 333.6px;
-             height: 92x;
-             flex-shrink: 0;
-             color: #819DAF;
-             font-family: Poppins;
-             font-size: 28px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: normal;
-         }
-    
-         .triptych-cards-container {
-             display: flex;
-             padding: 0px 40px;
-             align-items: center;
-             gap: 16px;
-             align-self: stretch;
-         }
-    
-         .card-container {
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             gap: 48px;
-             flex: 1 0 0;
-         }
-    
-         .text-card {
-             color: #5AC5F2;
-             font-family: Poppins;
-             font-size: 28px;
-             font-style: normal;
-             font-weight: 600;
-             line-height: normal;
-         }
-    
-         .image-container {
-             display: flex;
-             align-items: center;
-             flex-direction: column;
-             transition: opacity 0.5s ease;
-             /* Transition lisse pour l'opacité */
-             transition: transform 0.3s ease;
-             /* Transition fluide pour l'effet de zoom */
-         }
-    
-         .image-objective {
-             width: 337.6032px;
-             height: 564.5544px;
-             border-radius: 22.2672px;
-             background: url(/), lightgray 50% / cover no-repeat;
-         }
-    
-         .image-text {
-             /*padding:30px 50px ;
-      color: #819DAF;
-      text-align: justify;
-      width: 300px;
-      position: absolute;
-      font-family: Poppins;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0; /* Initialement masqué
-      transition: opacity 0.5s ease; /* Transition lisse pour l'opacité */
-             position: absolute;
-             width: 300px;
-             font-family: Poppins;
-             font-size: 20px;
-             font-style: normal;
-    
-             font-weight: 300;
-             line-height: normal;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             opacity: 0;
-             transition: opacity 0.5s ease;
-             color: #819daf;
-             /*background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-             padding: 30px 20px;
-             /* Espace à gauche et à droite à l'intérieur du conteneur */
-         }
-    
-         .image-text ul {
-             list-style-type: disc;
-             /* Style des puces */
-             padding-left: 20px;
-             /* Espace pour les puces */
-             text-align: left;
-             /* Alignement du texte */
-             margin: 0 20px;
-             /* Espace à gauche et à droite */
-         }
-    
-         .image-text li {
-             margin-bottom: 20px;
-             /* Espace entre les puces */
-         }
-    
-         .image-container:hover .image-objective {
-             opacity: 0.3;
-             /* Assombrir l'image */
-             transform: scale(1.05)
-         }
-    
-         .image-container:hover .image-text {
-             opacity: 1;
-             /* Afficher le texte */
-         }
-    
-         .btn-container {
-             display: flex;
-             padding: 0px 16px;
-             justify-content: center;
-             align-items: flex-start;
-             gap: 50%;
-             align-self: stretch;
-         }
-    
-         .register-container {
-             display: flex;
-             padding: 80px 56px;
-             flex-direction: column;
-             align-items: center;
-             gap: 80px;
-             align-self: stretch;
-             border-radius: 20px;
-             border: 2px solid #5AC5F2;
-             background: #001;
-         }
-    
-         .title-register-container {
-             width: 347.5px;
-             height: 115px;
-             color: #819DAF;
-             font-family: Poppins;
-             font-size: 35px;
-             font-style: normal;
-             font-weight: 400;
-             line-height: normal;
-         }
-    
-         .NameAndMail-boxes-container {
-             display: flex;
-             width: 350px;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             gap: 30px;
-         }
-    
-         .label-box-container {
-             display: flex;
-             padding: 6px 16px;
-             height: 40px;
-             flex-direction: row;
-             align-items: center;
-             align-self: stretch;
-             border-radius: 8px;
-             border: 1.5px solid #5AC5F2;
-             background: var(--glass-gradient, linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(101deg, rgba(255, 255, 255, 0.15) 1.55%, rgba(255, 255, 255, 0.05) 97.5%));
-         }
-    
-         .label {
-             color: rgba(255, 255, 255, 0.50);
-    
-             /* label */
-             font-family: Poppins;
-             font-size: 16px;
-             font-style: normal;
-             font-weight: 300;
-             line-height: normal;
-         }
-    
-         .animate-me {
-             opacity: 0;
-         }
-    
-         .animate-me.fadeIn {
-             animation: fadeInAnim 1s ease-in-out forwards;
-         }
-    
-         @keyframes fadeInAnim {
-             from {
-                 opacity: 0;
-             }
-    
-             to {
-                 opacity: 1;
-             }
-         }
-    
-    
-    
-    
-         @media (max-width: 800px) {
-    
-             .petitIcebergG,
-             .petitIcebergD,
-             .icebergImage,
-             .carte1,
-             .carte2,
-             .carte3,
-             .carte4,
-             .carte5,
-             .carte6,
-             .carte7,
-             .carte8,
-             .carte9,
-             .carte10,
-             .carte11,
-             .carte12,
-             .carte13,
-             .carte14 {
-                 position: absolute;
-             }
-         }
-    
-    
-  
- @media only screen and (max-width: 1000px) {
-     .logo-container {}
-
-     button:focus:not(:focus-visible) {
-         outline: none;
-     }
-
-     .navbar-toggler:focus {
-         text-decoration: none !important;
-         outline: none !important;
-         box-shadow: none !important;
-     }
-
-     .text-numbers {
-         align-items: center !important;
-         margin-top: 3rem !important;
-     }
-
-     .currentlyBuilding-container {
-         gap: 60px !important;
-     }
-
-     nav {
-         display: flex !important;
-         padding-right: 1rem !important;
-         padding-left: 1rem !important;
-         justify-content: space-between !important;
-         display: flex !important;
-
-     }
-
-     .MaunaSolution-container {
-         padding: 60px 20px !important;
-         border: 0px !important;
-         border-radius: 0px !important;
-
-     }
-
-     .MaunaProduct {
-         padding: 60px 20px !important;
-         border: 0px !important;
-         border-radius: 0px !important;
-
-     }
-
-     .MaunaDataBase {
-         padding: 60px 20px !important;
-         border: 0px !important;
-         border-radius: 0px !important;
-
-     }
-
-     .register-container {
-         padding: 60px 0px !important;
-         border: 0px !important;
-         border-radius: 0% !important;
-     }
-
-     .secondSection-container {
-         padding: 0px 0px !important;
-     }
-
-     .solution-text {
-         margin-top: 20px !important;
-     }
-
-     .text-product {
-         padding: 0px 20px !important;
-     }
-
-     .image-product {
-         width: 100% !important;
-         height: 100% !important;
-         margin-top: 25px;
-     }
-
-     .order1 {
-         order: 2;
-         margin-top: 25px;
-         ;
-
-     }
-
-     .order2 {
-         order: 1;
-         margin-bottom: 25px;
-     }
-
-     .title-devices {
-         font-size: 24px !important;
-     }
-
-     .titre-buildingDataBase {
-         font-size: 24px !important;
-     }
-
-     .title-product {
-         font-size: 28px !important;
-
-     }
-
-     .become-beta-btn {
-         margin-top: 30px !important;
-     }
-
-     .titre-become-beta {
-         font-size: 24px !important;
-
-     }
-
-     .card-container {
-         margin-bottom: 50px;
-     }
-
-     .iceberg-container {
-         transform: scale(0.5) !important;
-         display: none !important;
-
-     }
-
-     .menu-text {
-         font-size: 14px !important;
-     }
-
-     .iceberg-container {
-         height: 700px !important;
-         width: 100% !important;
-     }
-
-     .get-started-btn {
-         top: 600px !important;
-     }
-
-     .petitIcebergG {
-
-         top: 600px !important;
-         right: 100% !important;
-         left: auto !important;
-
-     }
-
-     .petitIcebergD {
-         top: -80px !important;
-         left: 92% !important;
-     }
-
-     .icebergImage {
-         transform: scale(0.5) !important;
-         left: -40% !important;
-     }
-
-         {
-     
-     }
+      <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+      <link rel="icon" href="https://mauna-ai.com/static/images/favicon.svg" type="image/x-icon">
+      <title>Mauna</title> 
 
-
-
-
-
-</style> 
     </head>
         <body>
 
@@ -1290,179 +56,27 @@ p {
  
 
       <ul style="margin-top: auto;
-    margin-bottom: auto;">
+    margin-bottom: auto;" id="myUl">
         <li>
-          <a onclick="my2Function(btn)" href="/" class="active">Solution</a>
+          <a  href="#MaunaSolution-container" onclick="my2Function(btn)" class="scroll-link">SOLUTION</a>
         </li>
         <li>
-          <a onclick="my2Function(btn)" href="/#Courses">R&D</a>
+          <a  href="#MaunaProduct" onclick="my2Function(btn)" class="scroll-link">R&D</a>
         </li>
         <li>
-          <a onclick="my2Function(btn)" href="/publications">Become beta-testeur</a>
+          <a  href="#register-container" onclick="my2Function(btn)" class="scroll-link">BECOME BETA-TESTER</a>
         </li>
+     
+             {% comment %} <li>
+
+          <a href="https://www.linkedin.com/company/ai-mauna/" target="_blank" class="m-2"> <span class="fa fa-linkedin"></span></a>
+                    <a  href="https://instagram.com/mauna.ai" target="_blank" class="m-2"> <span class="fa fa-instagram"></span></a>
+        </li> {% endcomment %}
 
       </ul>
+  
     </nav>
 
-    <style>
-      #check {
-    display: none;
-}
-      .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
-}
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #1A4159;
-    margin: 6px 0;
-    transition: 0.4s;}
-nav{
-background: transparent;
-  height: 80px;
-  width: 100%;
-  z-index: 9;
-}
-
-@media only screen and (min-width: 992px) {
-  label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-  }
-  
-}
-
-
-nav ul{
-  float: right;
-  margin-right: 90px;
-}
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-nav ul li a{
-    color: #1A4159;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration: none;
-}
-
-
-nav a:hover{
-  background: #8FB9B2;
-  transition: .5s;
-  
-}
-
-nav a:active{
-  background: #8FB9B2;
-  transition: .5s;
-  
-}
-
-.checkbtn{
-  font-size: 30px;
-  color:  #1A4159;
-  float: right;
-  line-height: 80px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-
-
-
-@media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    {% comment %} padding-left: 35px;
-    width: 70%; {% endcomment %}
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-@media (max-width: 858px){
-  nav ul{
-        margin-top: auto;
-    margin-bottom: auto;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 56px !important;
-}
-  }
-  .checkbtn{
-       display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  ul{
-    position: fixed;
-    width: 100%;
-    background: #F1F2F6;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    z-index: 9;
-  }
-  nav ul li{
-    display: block;
-    line-height: 30px;
-    border-bottom: solid 1px #eee;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #1A4159;
-    
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
-}
-
-.logoimg{
-  width:145px;
-  height:80px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-
-}
-
-@media only screen and (min-width: 953px) and (max-width: 991px) {
-	.logoimg{
-    margin-left: 50px;
-  }
-}
-
-    </style>
 
 <script>
   function myFunction(x) {
@@ -1476,7 +90,7 @@ nav a:active{
   }
  </script>
 
- <nav class="navbar navbar-expand-lg " style="background:#F1F2F6; display:none !important;">
+ {% comment %} <nav class="navbar navbar-expand-lg " style="background:#F1F2F6; display:none !important;">
     <div class="logo-container">
             <img src="{% static 'website/logo-mauna.svg'%}" alt="logo Mauna" class="logo-mauna" />
             <span class="text-mauna">MAUNA</span>
@@ -1498,17 +112,17 @@ nav a:active{
         <p class="menu-text" href="#">R&D</p>
       </li>
    <li class="nav-item">
-        <p class="menu-text" href="#">Become beta-testeur</p>
+        <p class="menu-text" href="#">Become beta-testeur </p>
       </li>
     </ul>
 
   </div>
-</nav> 
+</nav>  {% endcomment %}
      <div class="w-100">
 
         <div class="Background">
-            <div class="w-100 d-flex justify-content-center" style="height:100vh !important; overflow:hidden;flex-basis: fit-content;"> 
-           <div class='iceberg-container' >
+            <div class="w-100 d-flex justify-content-center iceberg-container-web" style="height:100vh !important; overflow:hidden;flex-basis: fit-content;"> 
+           <div class='iceberg-container' style="">
             <img src="{% static 'website/iceberg.svg'%}" alt="Iceberg" class="icebergImage" />
 <img src="{% static 'website/petit iceberg-g.svg'%}" alt="Petit Iceberg G" class="petitIcebergG" />
             <img src="{% static 'website/petit iceberg-d.svg'%}" alt="Petit Iceberg D" class="petitIcebergD"  />  
@@ -1536,19 +150,41 @@ nav a:active{
               <div class="typewriter-text" id="text3">HIDDEN POTENTIAL.</div>
             </div> 
           </div> 
-         <button class="get-started-btn">
-          Get Started
-        </button> 
+
+<button class="get-started-btn" onclick="scrollToSection('get-started-btn', 'MaunaSolution-container')">
+  Get Started
+</button>
     </div>
+
+                <div class="w-100 row justify-content-center iceberg-container-mobile mt-5" style="height:550px !important; overflow:hidden; display:none; position:relative"> 
+           <div class='row d-flex justify-content-center' >
+          <img src="{% static 'website/banner.png' %}" style="object-fit:contain">
+             </div>
+
+                     <div class="row w-100 d-flex justify-content-center"> 
+     <div class="typewriter-container" >
+              <div class="typewriter-text" id="text1">UNLOCK YOUR</div>
+
+
+              <div class="typewriter-text" id="text2">HIDDEN POTENTIAL. </div>
+      
+   
+            </div> 
+          </div> 
+           <div class="row w-100 d-flex justify-content-center"> 
+ 
+
+
+<button class="get-started-btn"  style="width:auto !important" onclick="scrollToSection('get-started-btn', 'MaunaSolution-container')">
+  Get Started
+</button>
+</div>
+    </div>
+    
        
-        <div class='secondSection-container mt-4'>
+        <div class='secondSection-container mt-2'>
           <div class='thematics-container'>
-            <div style="color: #1A4159;
-    font-family: Poppins;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;"> Track </div> 
+       
       <div class="MaunaSolution-container" id='MaunaSolution-container' style=" display: flex;padding: 80px 120px;flex-direction: column;align-items: center;gap: 80px;border-radius: 20px;border: 2px solid #5AC5F2;background: #001;	box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.03);">
               <div class='row w-100 d-flex justify-content-center'>
                 <div class='row d-flex w-100 mb-5'>
@@ -1560,7 +196,6 @@ nav a:active{
                     <p class='solution-text'>Mauna gathers in one single place multiple factors relevant to the athlete's performance:</p>
                     <ul class='solution-text-list'>
                       <li>Nutrition</li>
-                      <li>Hydration</li>
                       <li>Sleep</li>
                       <li>Health</li>
                       <li>Sport Activity </li>
@@ -1596,7 +231,7 @@ nav a:active{
                 </div>
               </div>
             </div> 
-         <div class="MaunaProduct">
+         <div class="MaunaProduct" id="MaunaProduct">
               <div class='row w-100 d-flex justify-content-start'>
                 <p class='title-product'>Power of software at your fingertips.</p>
               </div>
@@ -1678,33 +313,46 @@ nav a:active{
               </div>
             </div> 
 <div class="MaunaDataBase">
+ <style>
+.animation-item {
+    opacity: 0;
+    transform: translateY(0.9375rem); /* Example value for brand-animation-variant-slideInUp-distance */
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animation-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
               <div class="currentlyBuilding-container">
                 <p class="titre-buildingDataBase">Currently building a world unique database...</p>
                 <div class="row w-100 d-flex justify-content-center ">
-                        <div class="text-numbers col-sm-12 col-md-2 d-flex flex-column justify-content-center align-items-start animate-me">
-                            <span style="color: #5AC5F2;font-family: Poppins;font-size: 50px;font-style: normal;font-weight: 600;line-height: normal;">+150</span> 
+                        <div class="text-numbers animatedtext col-sm-12 col-md-2 d-flex flex-column justify-content-center align-items-start animation-item " style="transition-delay:0ms;">
+                            <span style="color: #5AC5F2;font-family: Poppins;font-size: 50px;font-style: normal;font-weight: 600;line-height: normal">+150</span> 
                             athletes
                         </div>
-                   <div class="text-numbers col-sm-12 col-md-2 d-flex flex-column justify-content-center align-items-center animate-me">
+                   <div class="text-numbers animatedtext col-sm-12 col-md-2 d-flex flex-column justify-content-center align-items-center animation-item" style="transition-delay:100ms;">
                             <span style="color: #5AC5F2;font-family: Poppins;font-size: 50px;font-style: normal;font-weight: 600;line-height: normal;">+5</span> 
                     experts</div>
-            <div class="text-numbers col-sm-12 col-md-2 d-flex flex-column justify-content-center align-items-end animate-me">
+            <div class="text-numbers animatedtext col-sm-12 col-md-2 d-flex flex-column justify-content-center align-items-end animation-item" style="transition-delay:200ms;">
                             <span style="text-align:right;color: #5AC5F2;font-family: Poppins;font-size: 50px;font-style: normal;font-weight: 600;line-height: normal;">1</span> 
                 ambition</div>
 
                   </div>
                 <div class="row w-100 d-flex justify-content-center">
-                    <div class="col-md-6">
-                    <p class="text-product text-change" style="font-size:23px !important;font-weight:800"> 
-text-here </p>
-{% comment %} <p  class="text-product" style="font-size:23px !important;"> {% endcomment %}
-{% comment %} To bring significant progress in the sport and health sectors. There is today no database that brings together such a detailed panel of factors essential to performance. Mauna’s database will enable advanced researches on various sport and health subjects.</p> {% endcomment %}
+                    <div class="col-md-6 animation-item animatedtext" style="transition-delay:300ms;">
+                    <p class="text-product different-size" style="font-size:23px;font-weight:800; "> 
+One common ambition </p>
+<p  class="text-product different-size" style="font-size:23px;">
+To bring significant progress in the sport and health sectors. There is today no database that brings together such a detailed panel of factors essential to performance. Mauna’s database will enable advanced researches on various sport and health subjects.</p>
 </div>                 
 </div>
-                  <button class="become-beta-btn w-auto">
+<a href="#register-container" style="text-decoration:none;">
+                  <button class="become-beta-btn w-auto" onclick="scrollToSection('become-beta-btn', 'register-container')">
                     Become a beta tester
                   </button>
-
+                </a>
                 </div>
               </div>
 
@@ -1760,11 +408,12 @@ text-here </p>
                 </div>
               </div>
               <div class="btn-container">
-                <button class="become-beta-btn">Get Started</button>
+                <button class="become-beta-btn"  onclick="scrollToSection('become-beta-btn', 'register-container')">Get Started</button>
+      
               </div>
             </div>
 
-            <div class='register-container mb-5' id='register-container'>
+            <div class='register-container mb-2' id='register-container'>
 
               <p class='title-register-container'>Become a MAUNA beta-tester.</p>
                                 <form action="{% url 'submit_form' %}" method="post" class="row d-flex justify-content-center">
@@ -1781,7 +430,38 @@ text-here </p>
 
               </div>
             </form>
-            </div> 
+            </div>
+            
+            <div class="row w-100 d-flex justify-content-center">
+
+                     <a href="https://www.linkedin.com/company/ai-mauna/" style="width:auto !important;    color: #1A4159;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;" target="_blank" class="m-2"> <span class="fa fa-linkedin"></span></a>
+                    <a  href="https://instagram.com/mauna.ai" style="width:auto !important;    color: #1A4159;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;" target="_blank" class="m-2"> <span class="fa fa-instagram"></span></a>
+            </div>
+          <div class="row w-100 d-flex justify-content-center mb-4 text-center">
+
+               <a  href="{% url 'privacy_policy' %}" style="width:auto !important;    color: #1A4159;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;" >Privacy Policy</a>
+          </div>
           </div>
         </div>
         </div>
@@ -1817,43 +497,80 @@ handleScroll();
 </script>  
 
 
+
+<style>
+ .scroll-link {
+            display: block;
+            margin: 20px 0;
+            color: inherit;
+            cursor: pointer;
+        }
+</style>
 <script>
-const textProduct = document.querySelector('.text-change');
-const button = document.querySelector('.become-beta-btn');
-const sentences = [
-    "One common ambition.",
-    "To bring significant progress in the sport and health sectors.",
-    "There is today no database that brings together such a detailed panel of factors essential to performance.",
-    "Mauna’s database will enable advanced researches on various sport and health subjects.",
-    // Add more sentences as needed
-];
-let currentIndex = 0;
 
-function displayNextSentence() {
-    if (currentIndex < sentences.length) {
-        textProduct.style.opacity = 0; // Fade out the text
-        setTimeout(() => {
-            textProduct.textContent = sentences[currentIndex];
-            textProduct.style.opacity = 1; // Fade in the new text
-            currentIndex++;
-            setTimeout(displayNextSentence, 2000); // Change delay time (in milliseconds) as needed
-        }, 500); // Delay before changing the text after fade out (should match transition time)
-    } else {
-        button.style.display = 'block'; // Display the button when all sentences are shown
-    }
-}
+    const smoothScrollTo = (element, duration) => {
+  const headerHeight = 0; // Adjust according to your layout header height
+  const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
 
-// Initially, hide the button
-button.style.display = 'none';
+  const animation = currentTime => {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  };
 
-// Start displaying sentences
-setTimeout(displayNextSentence, 2000); // Delay for the first sentence
+  const ease = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  };
+
+  requestAnimationFrame(animation);
+};
+
+const scrollToSection = (nomBouton, nomSection) => {
+  console.log("Button clicked:", nomBouton);
+  const section = document.getElementById(nomSection);
+  if (section) {
+    smoothScrollTo(section, 1000); // 1000ms = 1 second for scrolling
+  }
+};
+
 </script>
 
 
-  
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener('scroll', () => {
+      const elements = document.querySelectorAll('.animatedtext');
+      
+      elements.forEach(element => {
+        const bounding = element.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        // To trigger the animation when the top of the element reaches the middle of the viewport
+        const offset = 0.9;
+
+        if (
+          bounding.top >= 0 &&
+          bounding.bottom <= viewportHeight &&
+          (bounding.top - viewportHeight * offset) <= 0
+        ) {
+          element.classList.add('animate');
+        } else {
+          element.classList.remove('animate');
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
