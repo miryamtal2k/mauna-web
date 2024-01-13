@@ -7,6 +7,49 @@ p {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
+.animation-item {
+    opacity: 0;
+    transform: translateY(0.9375rem);
+    /* Example value for brand-animation-variant-slideInUp-distance */
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animation-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.scroll-link {
+    display: block;
+    margin: 20px 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+.social-icons {
+    width: auto !important;
+    color: #1A4159;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.footer-privacy-policy {
+    width: auto !important;
+    color: #1A4159;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
 
 body {
     background: #F1F2F6;
@@ -1452,3 +1495,4 @@ nav a:active {
         margin-left: 50px;
     }
 }
+
