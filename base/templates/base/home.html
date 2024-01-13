@@ -375,12 +375,14 @@ To bring significant progress in the sport and health sectors. There is today no
                 </div>
               </div>
               <div class="btn-container">
-                <button class="become-beta-btn"  onclick="scrollToSection('become-beta-btn', 'register-container')">Get Started</button>
-      
+                <a href="https://calendly.com/mauna-ai/30min" target="_blank">
+        
+                <button class="become-beta-btn" >Get Started</button>
+                </a>
               </div>
             </div>
 
-            <div class='register-container mb-2' id='register-container'>
+            {% comment %} <div class='register-container mb-2' id='register-container'>
 
               <p class='title-register-container'>Become a MAUNA beta-tester.</p>
                                 <form action="{% url 'submit_form' %}" method="post" class="row d-flex justify-content-center">
@@ -397,7 +399,7 @@ To bring significant progress in the sport and health sectors. There is today no
 
               </div>
             </form>
-            </div>
+            </div> {% endcomment %}
             
             <div class="row w-100 d-flex justify-content-center">
 
