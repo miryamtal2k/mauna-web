@@ -5,6 +5,12 @@ from django.conf import settings
 def home_view(request):
     return render(request, 'base/home.html')
 
+def articles_view(request):
+    return render(request, 'base/articles.html')
+
+def article_view(request):
+    return render(request, 'base/article.html')
+
 def privacy_policy(request):
     return render(request, 'base/privacypolicy.html')
 

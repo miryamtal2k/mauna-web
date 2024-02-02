@@ -1,5 +1,4 @@
-     {% load static %} 
-     <html>
+     {% load static %} <html>
        <head>
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +23,9 @@
          <meta property="og:image" itemprop="image" content="https://mauna-ai.com/static/images/mauna.png">
          <meta property="og:type" content="website" />
          <link rel="icon" href="https://mauna-ai.com/static/images/favicon.ico" type="image/x-icon">
+
          <style>
+
            body {
              text-align: justify;
            }
@@ -81,11 +82,18 @@
              </li>
              <li>
                <a href="{% url 'privacy_policy' %}" class="scroll-link">Privacy Policy</a>
-             </li>
+             </li> {% comment %} <li>
+               <a href="https://www.linkedin.com/company/ai-mauna/" target="_blank" class="m-2">
+                 <span class="fa fa-linkedin"></span>
+               </a>
+               <a href="https://instagram.com/mauna.ai" target="_blank" class="m-2">
+                 <span class="fa fa-instagram"></span>
+               </a>
+             </li> {% endcomment %}
            </ul>
          </nav>
-         <div class="d-flex  justify-content-center mt-4 w-100">
-           <div class="col-md-6 col-sm-12 mt-5 col-11">
+         <div class="d-flex row justify-content-center mt-5">
+           <div class="col-md-6 col-sm-12 mt-5">
              <h1> Privacy Policy </h1>
              <h5>Article 1. General Information</h5>
              <p> The company MAUNA (hereinafter referred to as the "Company" or "Mauna") considers the protection of personal data to be of fundamental importance for the operation of its activities. The personal data of its customers, users, and visitors of its application are protected and processed with the utmost care, in compliance with the applicable legislation.</p>
@@ -95,7 +103,8 @@
              <p>
              <ul>
                <li> The term "Personal Data" refers to information that can be used to identify or contact you online or offline, as well as any information you provide to us. This information includes your name, first name, username, postal address, email address ("Personal Information"), as well as, where applicable, medical and health data such as your cardiac activity, demographic data such as your date of birth, age, gender, your geolocation data, and your sleep and dietary habits or preferences when this data is associated with your personal information (collectively referred to as "Personal Data"). </li>
-               <li> The term "Data Controller" refers to the Company, which alone or jointly determines the purposes and means of the processing of Personal Data described in this policy. Before using the Digital Media, please read this Privacy Policy carefully and accept it. Legally, you are not obliged to provide the Company with personal data, and you hereby confirm that you knowingly and freely provide your Personal Data to it. By using the Digital Media, you accept the terms of this Privacy Policy and the collection, analysis, and sharing of Personal Data for the purposes set out herein. If you do not agree to the terms of this Privacy Policy, you will not be able to use the Digital Media. </li>
+               <li> The term "Data Controller" refers to the Company, which alone or jointly determines the purposes and means of the processing of Personal Data described in this policy. Before using the Digital Media, please read this Privacy Policy carefully and accept it. Legally, you are not obliged to provide the Company with personal data, and you hereby confirm that you knowingly and freely provide your Personal Data to it. By using the Digital Media, you accept the terms of this Privacy Policy and the collection, analysis, and sharing of Personal Data for the purposes set out herein. If you do not agree to the terms of this Privacy Policy, you will not be able to use the Digital Media.
+                 <li />
              </ul>
              <p> The Company reserves the right to modify this Privacy Policy at any time. The Company will inform you of any changes by publishing them in this Privacy Policy. The Company therefore invites you to regularly consult this Privacy Policy to ensure that you are aware of any changes made and how your data may be used.</p>
              <h5> Article 2. Collection of Personal Data </h5>
@@ -211,16 +220,30 @@
              </ul>
              <p> Below is a list of the different types of cookies that the Company uses on its Digital Media : </p>
              <p> Essential Cookies : </br> They are absolutely necessary for the proper functioning of the Digital Media and the use of its services and features. </br> The Company also uses technical cookies that allow the Digital Media to remember your choices (such as your username, language, or country) for customization purposes. These cookies do not collect any information about you that can be used for advertising purposes or to remember the pages you have viewed on the Internet. </br> These cookies are essential for the proper functioning of the Digital Media. You cannot refuse their use. </p>
-             <p>Analysis Cookies: </br> The Digital Media may also use analysis cookies (such as Google Analytics). These cookies collect information about how you use and navigate the Digital Media. </br> For example, these cookies will remember the most visited pages, IP addresses (Internet Protocol), browser type, Internet Service Provider (ISP), referral/exit pages, operating system, timestamp, and browsing path. The Company uses this information to analyze trends, manage the website, track user browsing on the Digital Media, and collect demographic data about the user base as a whole. </br> You can control cookies through your browser preferences and other tools. To disable these cookies, please refer to our dedicated page on the Digital Media. </p>
+             <p>Analysis Cookies </br> The Digital Media may also use analysis cookies (such as Google Analytics). These cookies collect information about how you use and navigate the Digital Media. </br> For example, these cookies will remember the most visited pages, IP addresses (Internet Protocol), browser type, Internet Service Provider (ISP), referral/exit pages, operating system, timestamp, and browsing path. The Company uses this information to analyze trends, manage the website, track user browsing on the Digital Media, and collect demographic data about the user base as a whole. </br> You can control cookies through your browser preferences and other tools. To disable these cookies, please refer to our dedicated page on the Digital Media. </p>
              <h5>Article 12. Questions / Contact </h5>
              <p> If you have any questions, complaints, or comments regarding this Privacy Policy or data collection and cookie management practices, please contact the Company by sending a letter to Mauna SAS or by sending an email to data@mauna-ai.com.</p>
            </div>
          </div>
          <div class="row w-100 d-flex justify-content-center mb-4 mt-4">
-           <a href="https://www.linkedin.com/company/ai-mauna/" class="social-icons" target="_blank" class="m-2">
+           <a href="https://www.linkedin.com/company/ai-mauna/" style="width:auto !important;    color: #1A4159;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;" target="_blank" class="m-2">
              <span class="fa fa-linkedin"></span>
            </a>
-           <a href="https://instagram.com/mauna.ai" class="social-icons" target="_blank" class="m-2">
+           <a href="https://instagram.com/mauna.ai" style="width:auto !important;    color: #1A4159;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;" target="_blank" class="m-2">
              <span class="fa fa-instagram"></span>
            </a>
          </div>
@@ -228,4 +251,4 @@
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
        </body>
-    </html>
+     </html>
