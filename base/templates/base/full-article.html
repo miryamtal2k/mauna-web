@@ -1,4 +1,10 @@
 {% extends 'base/base.html' %} {% load static %}{% block content %}
+      {% comment %} <meta property="og:site_name" content="Mauna AI">
+      <meta property="og:title" content="{{article.title_fr}}" />
+      <meta property="og:description" content=" Mauna is a solution gathering multiple factors and then using AI to optimize sport performances and reduce injuries." />
+      <meta property="og:image" itemprop="image" content="{{article.image.url}}">
+      <meta property="og:type" content="website" /> {% endcomment %}
+
 <link rel="stylesheet" type="text/css" href="{% static 'css/article1.css' %}">
 <div class="article-container">
   <div class="titreETarticle-container">
