@@ -28,6 +28,14 @@ def articles_view(request):
 def article_view(request):
     return render(request, 'base/article.html')
 
+from django.shortcuts import render, get_object_or_404
+from .models import Article
+
+def fullarticle_view(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    return render(request, 'base/full-article.html', {'article': article})
+
+
 def privacy_policy(request):
     return render(request, 'base/privacypolicy.html')
 

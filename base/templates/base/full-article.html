@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %} {% load static %}{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/article1.css' %}">
+<div class="article-container">
+  <div class="titreETarticle-container">
+    <div class="titre-article-container">
+      <div class="titre-article">
+        {{article.title_fr}}
+      </div>
+    </div>
+    <div class="imageETtexte-conatiner">
+      <div class="imageETdateETtype-container">
+        <div class="image-container">
+          <img src="{{article.main_image.url}}" alt="image" class="image" />
+        </div>
+        <div class="date-publi-container">
+          <div class="date-publi">
+            {{article.formatted_date}}
+          </div>
+        </div>
+        <div class="type-container">
+          <div class="type-content-container">
+            <div class="type-texte">Méthodologie</div>
+          </div>
+          <div class="type-content-container">
+            <img src="{% static 'images/trait.svg' %}" alt="type-trait " class="type-trait" />
+          </div>
+          <div class="type-content-container">
+            <div class="type-texte">{{article.category.name_fr}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="texte-intro-container">
+        <div class="texte-intro"> 
+            {{article.content_fr | safe}}
+        </div>
+      </div>
+    </div>
+  </div> {% endblock %}

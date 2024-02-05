@@ -26,22 +26,22 @@
             <a href="{% url 'article' %}" style="text-decoration:none">
               <div class="article-container">
                 <div class="date-publi-container">
-                  <div class="date-publi"> 1 Feb, 2024 </div>
+                  <div class="date-publi"> {{article.formatted_date}} </div>
                 </div>
                 <div class="imageETtypeETtitre-container">
                   <div class="imageETtype-container">
                     <div class="image-container">
-                      <img src="{{article.main_image.url}}" alt="image article 1" class="image" />
+                      <img src="{{article.main_image.url}}" alt="image" class="image" />
                     </div>
                     <div class="type-container">
                       <div class="type-content-container">
-                        <div class="type-texte"> Methodology </div>
+                        <div class="type-texte"> Methodologie </div>
                       </div>
                       <div class="type-content-container">
                         <img src="{% static 'images/trait.svg' %}" alt="trait" class="type-trait" />
                       </div>
                       <div class="type-content-container">
-                        <div class="type-texte"> Endurance sports </div>
+                        <div class="type-texte"> {{article.category.name_fr}} </div>
                       </div>
                     </div>
                     <div class="titre-article-container">
@@ -69,17 +69,17 @@
                   <div class="imageETtypeETtitre-container">
                     <div class="imageETtype-container">
                       <div class="image-container">
-                        <img src="{{article.main_image.url}}" alt="image article 1" class="image" />
+                        <img src="{{article.main_image.url}}" alt="image" class="image" />
                       </div>
                       <div class="type-container">
                         <div class="type-content-container">
-                          <div class="type-texte"> Methodology </div>
+                          <div class="type-texte"> Methodologie </div>
                         </div>
                         <div class="type-content-container">
                           <img src="{% static 'images/trait.svg' %}" alt="trait" class="type-trait" />
                         </div>
                         <div class="type-content-container">
-                          <div class="type-texte"> Endurance sports </div>
+                          <div class="type-texte"> {{article.category.name_fr}} </div>
                         </div>
                       </div>
                       <div class="titre-article-container">
