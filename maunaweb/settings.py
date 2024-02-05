@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n5fx8%ks$a2p$#_g$)d!mzeit(@jmhq&ilj53hy+60%jc)_v)^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -123,7 +123,10 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/' 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'), 
+]
+
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
@@ -134,7 +137,7 @@ EMAIL_USE_TLS = True  # Use TLS for secure connection
 EMAIL_HOST = 'smtp.gmail.com'  # SMTP server
 EMAIL_PORT = 587  # SMTP port
 EMAIL_HOST_USER = 'data@mauna-ai.com'  # email address
-EMAIL_HOST_PASSWORD = 'kivhcqkunjoyocdm'  #email password
+EMAIL_HOST_PASSWORD = 'eioevczruqrjftfu'  #email password
 
 # Default email addresses
 DEFAULT_FROM_EMAIL = 'data@mauna-ai.com'
