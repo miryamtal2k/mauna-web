@@ -9,7 +9,7 @@ class Article(models.Model):
     content_fr = RichTextField() 
     content_en = RichTextField(default="") 
 
-    publication_date = models.DateTimeField(auto_now_add=True)
+    publication_date = models.DateTimeField()
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
     tags = models.ManyToManyField('Tag')
     main_image = models.ImageField()
