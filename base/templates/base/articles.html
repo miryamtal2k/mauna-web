@@ -27,7 +27,7 @@
         <div class="row d-flex justify-content-start">
           {% for article in already_available_articles %}
           <div class="col-12 col-md-4 col-lg-4 col-sm-12">
-            <a href="{% url 'article' article.slug %}" style="text-decoration:none">
+            <a href="{% url 'article_detail' article.slug %}" style="text-decoration:none">
               <div class="article-container">
                 <div class="date-publi-container">
                   <div class="date-publi"> {{article.formatted_date}} </div>
