@@ -21,6 +21,7 @@
           <div class="titre-groupe-articles"> The latest articles </div>
         </div>
         <div class="row d-flex justify-content-between">
+          {% for article in already_available_articles %}
           <div class="col-12 col-md-4 col-lg-4 col-sm-12">
             <a href="{% url 'article' %}" style="text-decoration:none">
               <div class="article-container">
@@ -30,7 +31,7 @@
                 <div class="imageETtypeETtitre-container">
                   <div class="imageETtype-container">
                     <div class="image-container">
-                      <img src="{% static 'images/article1.png' %}" alt="image article 1" class="image" />
+                      <img src="{{article.main_image.url}}" alt="image article 1" class="image" />
                     </div>
                     <div class="type-container">
                       <div class="type-content-container">
@@ -44,73 +45,15 @@
                       </div>
                     </div>
                     <div class="titre-article-container">
-                      <div class="titre-article"> Defining Training: Do you Really Know What It Means? </div>
+                      <div class="titre-article"> {{article.title_fr}} </div>
                     </div>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          {% comment %} <div class="col-12 col-md-4 col-lg-4 col-sm-12">
-            <a href="" style="text-decoration:none">
-              <div class="article-container">
-                <div class="date-publi-container">
-                  <div class="date-publi"> 1 Feb, 2024 </div>
-                </div>
-                <div class="imageETtypeETtitre-container">
-                  <div class="imageETtype-container">
-                    <div class="image-container">
-                      <img src="{% static 'images/article1.png' %}" alt="image article 1" class="image" />
-                    </div>
-                    <div class="type-container">
-                      <div class="type-content-container">
-                        <div class="type-texte"> Methodology </div>
-                      </div>
-                      <div class="type-content-container">
-                        <img src="{% static 'images/trait.svg' %}" alt="trait" class="type-trait" />
-                      </div>
-                      <div class="type-content-container">
-                        <div class="type-texte"> Endurance sports </div>
-                      </div>
-                    </div>
-                    <div class="titre-article-container">
-                      <div class="titre-article"> Defining Training: Do You Really Know What It Means? </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-4 col-lg-4 col-sm-12">
-            <a href="" style="text-decoration:none">
-              <div class="article-container">
-                <div class="date-publi-container">
-                  <div class="date-publi"> 14 Feb, 2024 </div>
-                </div>
-                <div class="imageETtypeETtitre-container">
-                  <div class="imageETtype-container">
-                    <div class="image-container">
-                      <img src="{% static 'images/article1.png' %}" alt="image article 1" class="image" />
-                    </div>
-                    <div class="type-container">
-                      <div class="type-content-container">
-                        <div class="type-texte"> Methodology </div>
-                      </div>
-                      <div class="type-content-container">
-                        <img src="{% static 'images/trait.svg' %}" alt="trait" class="type-trait" />
-                      </div>
-                      <div class="type-content-container">
-                        <div class="type-texte"> Endurance sports </div>
-                      </div>
-                    </div>
-                    <div class="titre-article-container">
-                      <div class="titre-article"> Training Load: Assessing Its Validity </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div> {% endcomment %}
+          {% endfor %}
+
         </div>
           <div class="titre-groupe-articles-conatiner">
             <div class="titre-groupe-articles"> Coming Soon </div>
@@ -148,65 +91,5 @@
               </a>
             </div>
             {% endfor %}
-            {% comment %} <div class="col-12 col-md-4 col-lg-4 col-sm-12">
-              <a href="" style="text-decoration:none">
-                <div class="article-container">
-                  <div class="date-publi-container">
-                    <div class="date-publi"> 14 Feb, 2024 </div>
-                  </div>
-                  <div class="imageETtypeETtitre-container">
-                    <div class="imageETtype-container">
-                      <div class="image-container">
-                        <img src="{% static 'images/article3.png' %}" alt="image article 1" class="image" />
-                      </div>
-                      <div class="type-container">
-                        <div class="type-content-container">
-                          <div class="type-texte"> Methodology </div>
-                        </div>
-                        <div class="type-content-container">
-                          <img src="{% static 'images/trait.svg' %}" alt="trait" class="type-trait" />
-                        </div>
-                        <div class="type-content-container">
-                          <div class="type-texte"> Endurance sports </div>
-                        </div>
-                      </div>
-                      <div class="titre-article-container">
-                        <div class="titre-article"> Training Load: Assessing Its Validity </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div> {% endcomment %}
-            {% comment %} <div class="col-12 col-md-4 col-lg-4 col-sm-12">
-              <a href="" style="text-decoration:none">
-                <div class="article-container">
-                  <div class="date-publi-container">
-                    <div class="date-publi"> 1 Feb, 2024 </div>
-                  </div>
-                  <div class="imageETtypeETtitre-container">
-                    <div class="imageETtype-container">
-                      <div class="image-container">
-                        <img src="{% static 'images/article1.png' %}" alt="image article 1" class="image" />
-                      </div>
-                      <div class="type-container">
-                        <div class="type-content-container">
-                          <div class="type-texte"> Methodology </div>
-                        </div>
-                        <div class="type-content-container">
-                          <img src="{% static 'images/trait.svg' %}" alt="trait" class="type-trait" />
-                        </div>
-                        <div class="type-content-container">
-                          <div class="type-texte"> Endurance sports </div>
-                        </div>
-                      </div>
-                      <div class="titre-article-container">
-                        <div class="titre-article"> Defining Training: Do You Really Know What It Means? </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div> {% endcomment %}
           </div>
     </div> {% endblock %}
