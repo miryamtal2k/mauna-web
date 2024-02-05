@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n5fx8%ks$a2p$#_g$)d!mzeit(@jmhq&ilj53hy+60%jc)_v)^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -74,13 +75,23 @@ WSGI_APPLICATION = 'maunaweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'maunaweb',
+        'USER': 'root',
+        'PASSWORD': 'ibiye4700',
+        'HOST': 'localhost',
+        'PORT': '3309',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
