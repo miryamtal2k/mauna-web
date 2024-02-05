@@ -316,6 +316,11 @@
     font-weight: 400;
     line-height: normal;
 }
+@media (max-width: 1200) {
+    .articles-container {
+            display: flex;
+            padding: 80px 20px;}
+}
 
 @media (max-width: 900px) {
 .articles-container {
