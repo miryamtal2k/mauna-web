@@ -18,6 +18,9 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title_fr
+    
+    def formatted_date(self):
+        return self.publication_date.strftime("%d %b, %Y")
 
 class Tag(models.Model):
     name_fr = models.CharField(max_length=255)
