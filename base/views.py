@@ -57,3 +57,21 @@ def submit_form(request):
             return render(request, 'base/home.html')
     return render(request, 'base/home.html')
 
+from django.http import JsonResponse
+
+def assetlinks(request):
+    response = [
+        {
+            "relation": [
+                "delegate_permission/common.handle_all_urls"
+            ],
+            "target": {
+                "namespace": "android_app",
+                "package_name": "com.ai_mauna.mauna",
+                "sha256_cert_fingerprints": [
+                    "F2:9D:8A:C4:D1:43:53:0C:9A:2C:2A:31:6A:1D:6E:65:A8:1C:04:91:71:C8:E4:BE:DF:10:92:78:24:F4:F7:5E"
+                ]
+            }
+        }
+    ]
+    return JsonResponse(response, safe=False)
