@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
@@ -5,17 +6,19 @@ from .models import *
 def home_view(request):
     return render(request, 'base/home.html')
 
-from django.utils import timezone
-from datetime import timedelta
+
+
 
 def articles_view(request):
-    current_date = timezone.now().date()
-    
+    current_date = datetime.now().date()  # Get current date
+
     # Articles coming soon (published tomorrow or later)
-    coming_soon_articles = Article.objects.filter(publication_date__gt=current_date)
-    
+    coming_soon_articles = Article.objects.filter(
+        publication_date__gt=current_date)
+
     # Articles already available (published today or earlier)
-    already_available_articles = Article.objects.filter(publication_date__lte=current_date)
+    already_available_articles = Article.objects.filter(
+        publication_date__lte=current_date)
 
     context = {
         'coming_soon_articles': coming_soon_articles,
