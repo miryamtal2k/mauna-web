@@ -1,69 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My App</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style>
-        body {
-            background: #284C64;
-            color: white;
-        }
+<style>
+body {
+    background: #284C64;
+}
 
-        .welcome-container {
-            text-align: center;
-            margin-top: 20%;
-        }
+@page {
+  size: A4;
+  margin: 0;
+      background: #284C64;
 
-        .welcome-container h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+}
+.presentation-rapport-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 50px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: #284C64;
+}
 
-        .app-icons img {
-            width: 150px;
-            margin: 0 10px;
-        }
+.logoETtitre-MAUNA-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
 
-        @media (max-width: 768px) {
-            .welcome-container h1 {
-                font-size: 2rem;
-            }
+.logo-container{
+    display: flex;
+    align-items: center;
+}
 
-            .app-icons img {
-                width: 120px;
-            }
-        }
-    </style>
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.titre-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.titre {
+    flex: 1 0 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.dessinEtbandeau-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.dessin {
+    width: 800px;
+    height: 272px;
+}
+
+.dessin>*:first-child {
+    width: 100%;
+}
+
+.bandeau-container {
+    display: flex;
+    padding: 0px 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.texte-container {
+    display: flex;
+    padding: 20px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 1px solid #49687C;
+    background: #416176;
+
+    /* glass blur */
+    backdrop-filter: blur(25px);
+}
+
+.titre-bandeau {
+    align-self: stretch;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.texte1-bandeau {
+    align-self: stretch;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.texte2-bandeau {
+    align-self: stretch;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}  
+  </style>
+    <title>Rapport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="row welcome-container">
-            <div class="col-12">
-                <h1>Welcome to My App!</h1>
-                <p>Download the app now from:</p>
-                <div class="app-icons">
-                    <a href="#"><img src="google-play-icon.png" alt="Google Play"></a>
-                    <a href="#"><img src="app-store-icon.png" alt="App Store"></a>
+    <div class='presentation-rapport-container'>
+        <div class='logoETtitre-MAUNA-container' >
+            <div class="logo-container">
+                <img src="../static/report/logo-mauna.svg" alt="icone mauna" class="logo" />
+            </div>
+            <div class="titre-container">
+                <div class="titre">MAUNA</div>
+            </div>
+        </div>
+        <div class="dessinEtbandeau-container">
+            <div class ="dessin" style="margin-top:75px;margin-bottom:75px;">
+                <img src="../static/report/dessin.png" alt="logo Mauna"/>
+            </div>
+            <div class="bandeau-container" style="">
+                <div class="texte-container" style="padding-top:40px; padding-bottom:40px;">
+                    <div class="titre-bandeau" style="margin-bottom: 2px; margin-top:5px;">Rapport d’Entrainement & Lifestyle</div>
+                    <div class="texte1-bandeau" style="margin-bottom: 2px;">{{first_name}} {{last_name}}</div>
+                    <div class="texte1-bandeau" style="margin-bottom: 2px;">Semaine {{weeks_since_join}}</div>
+                    <div class="texte2-bandeau" style="margin-bottom: 5px;">{{date_of_day_start}} - {{date_of_day_end}}</div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
-        integrity="sha384-C5pdZ4KHzn0t1kdbjWIE5Uo5ZtJV1jfw1lJKWn2KA8VS1yTDB1vZj4VW8sf49VIh"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-pzjw8f+VvXlZ6bm9JDDgFEzFUn7Q4WJYYooC5cpq3HMELmk/toom0hq5uXWqpJqu"
-        crossorigin="anonymous"></script>
 </body>
-
 </html>
