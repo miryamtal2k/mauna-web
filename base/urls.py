@@ -5,7 +5,7 @@ urlpatterns = [
     # path('', include(router.urls)),
     path('',views.home_view, name='home'),
     path('articles',views.articles_view, name='articles'),
-    path('onboarding',views.onboarding_view_view, name='onboarding'),
+    path('onboarding',views.onboarding_view, name='onboarding'),
 
     path('article/<slug:slug>/', views.fullarticle_view, name='article_detail'),
     path('articles',views.articles_view, name='articles'),
