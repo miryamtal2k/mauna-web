@@ -1,11 +1,69 @@
-{% extends 'base/base.html' %} {% load static %}{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
-body{
-    background-color: #284C64
-}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background: #284C64;
+            color: white;
+        }
 
-<h1 style="color:white">Hello</h1>
+        .welcome-container {
+            text-align: center;
+            margin-top: 20%;
+        }
 
-{% endblock %}
+        .welcome-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .app-icons img {
+            width: 150px;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .welcome-container h1 {
+                font-size: 2rem;
+            }
+
+            .app-icons img {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row welcome-container">
+            <div class="col-12">
+                <h1>Welcome to My App!</h1>
+                <p>Download the app now from:</p>
+                <div class="app-icons">
+                    <a href="#"><img src="google-play-icon.png" alt="Google Play"></a>
+                    <a href="#"><img src="app-store-icon.png" alt="App Store"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+        integrity="sha384-C5pdZ4KHzn0t1kdbjWIE5Uo5ZtJV1jfw1lJKWn2KA8VS1yTDB1vZj4VW8sf49VIh"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-pzjw8f+VvXlZ6bm9JDDgFEzFUn7Q4WJYYooC5cpq3HMELmk/toom0hq5uXWqpJqu"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
