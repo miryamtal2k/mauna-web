@@ -6,6 +6,11 @@ from .models import *
 def home_view(request):
     return render(request, 'base/home.html')
 
+def onboarding_view(request):
+    return render(request, 'base/onboarding.html')
+
+
+
 def articles_view(request):
     current_date = datetime.now().date()  # Get current date
 
