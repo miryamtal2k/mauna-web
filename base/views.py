@@ -1,13 +1,33 @@
 from datetime import datetime
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django_user_agents.utils import get_user_agent
+
 from django.conf import settings
 from .models import *
 def home_view(request):
     return render(request, 'base/home.html')
 
 def onboarding_view(request):
-    return render(request, 'base/onboarding.html')
+    android_link = "https://play.google.com/store/apps/details?id=com.ai_mauna.mauna&pcampaignid=web_share"
+    ios_link = "https://apps.apple.com/lb/app/mauna/id6466425252"
+    default_link = "https://play.google.com/store/apps/details?id=com.ai_mauna.mauna&pcampaignid=web_share"
+
+    user_agent = get_user_agent(request)
+
+    if user_agent.is_mobile:
+        if user_agent.is_android:
+            link = android_link
+        elif user_agent.is_ios:
+            link = ios_link
+        else:
+            link = default_link
+    else:
+        link = default_link
+
+    # Return the link in the context of the response
+    context = {'app_link': link}
+    return render(request, 'base/onboarding.html', context)
 
 
 
