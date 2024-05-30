@@ -16,9 +16,9 @@ def onboarding_view(request):
     user_agent = get_user_agent(request)
 
     if user_agent.is_mobile:
-        if user_agent.is_android:
+        if user_agent.os.family == 'Android':
             link = android_link
-        elif user_agent.is_ios:
+        elif user_agent.os.family == 'iOS':
             link = ios_link
         else:
             link = default_link
