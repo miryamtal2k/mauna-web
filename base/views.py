@@ -64,6 +64,14 @@ def fullarticle_view(request, slug):
 def privacy_policy(request):
     return render(request, 'base/privacypolicy.html')
 
+
+def terms_conditions(request):
+    return render(request, 'base/terms-conditions.html')
+
+
+def faqs(request):
+    return render(request, 'base/faqs.html')
+
 def submit_form(request):
     if request.method == 'POST':
         name = request.POST.get('name')

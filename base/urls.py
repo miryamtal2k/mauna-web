@@ -12,6 +12,9 @@ urlpatterns = [
 
     path('submit_form/',views.submit_form, name="submit_form"),
     path('privacy-policy/', views.privacy_policy, name="privacy_policy"),
+    path('faqs/', views.faqs, name="faqs"),
+    path('terms-conditions/', views.terms_conditions, name="terms_conditions"),
+
     path('.well-known/assetlinks.json', views.assetlinks, name='assetlinks'),
 
 
